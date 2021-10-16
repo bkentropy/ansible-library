@@ -1,0 +1,2 @@
+[nodes]
+node1 ansible_host=192.168.0.57 ansible_user=packer ansible_ssh_private_key_file=~/.ssh/id_macos_rsa ansible_python_interpreter=/usr/bin/python3

@@ -1,0 +1,10 @@
+---
+- name: Test ping
+  hosts: nodes
+  become: yes
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
+
+  tasks:
+  - name: Run ping
+    ping:
