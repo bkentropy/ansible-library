@@ -2,19 +2,17 @@ pipeline {
     agent any
 
     stages {
-        node {
+        // node { }
 
+        stage('Build') {
+            steps {
             ansiblePlaybook(
                 playbook: 'echo.yml',
                 inventory: 'inventory.ini',
                 credentialsId: 'id_macos_rsa',
                 // extras: '-e parameter="some value"')
             }
+        }
 
-        // stage('Build') {
-        //     steps {
-
-        //     }
-        // }
     }
 }
