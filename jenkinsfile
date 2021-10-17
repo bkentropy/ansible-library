@@ -5,9 +5,12 @@ pipeline {
         // node { }
 
         stage('Build') {
+            
             steps {
-
                 sh "echo hello"
+            }
+
+            steps {
                 ansiblePlaybook(
                     playbook: 'echo.yml',
                     inventory: 'inventory.ini',
